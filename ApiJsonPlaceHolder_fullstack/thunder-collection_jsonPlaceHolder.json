@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "jsonPlaceHolder",
+    "dateExported": "2023-02-10T01:36:27.778Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "125c0634-7503-4cb4-8f92-6752ff801cc8",
+            "colId": "6083a6ad-eab1-456b-b39f-36c34f14be83",
+            "containerId": "",
+            "name": "getPosts",
+            "url": "http://localhost:3001/posts/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-01-25T14:49:07.435Z",
+            "modified": "2023-02-10T01:09:59.402Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bb0dc7a8-77c7-481b-8e54-d7465a9d32cb",
+            "colId": "6083a6ad-eab1-456b-b39f-36c34f14be83",
+            "containerId": "",
+            "name": "createPosts",
+            "url": "http://localhost:3001/posts/7b710d97-7407-438e-b083-48d0026125ef",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-01-25T17:34:26.754Z",
+            "modified": "2023-01-30T13:06:38.791Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n\n  \"title\":\"Tupac Shakur\",\n  \"body\": \" Tupac Amaru Shakur (Nueva York, 16 de junio de 1971-Las Vegas, Nevada, 13 de septiembre de 1996) también conocido como 2Pac, simplemente Tupac, fue   Nombre de nacimiento: Lesane Parish \",\n  \n  \"userId\":\"11\"\n\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9e11eb2d-c7d9-4dd5-ad81-d9198ce95255",
+            "colId": "6083a6ad-eab1-456b-b39f-36c34f14be83",
+            "containerId": "",
+            "name": "updatePost",
+            "url": "http://localhost:3001/posts/e3950add-488e-4b70-9c78-be2f2dcafd0a",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-01-25T19:42:05.023Z",
+            "modified": "2023-01-25T20:01:19.511Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"ariel motorcicles\",\n  \"body\":\"empresa ingleterra fundadora de la sprimera motocicletas\",\n   \"userId\": \"11\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7e702a0e-2c26-4794-9f75-db1e737920eb",
+            "colId": "6083a6ad-eab1-456b-b39f-36c34f14be83",
+            "containerId": "",
+            "name": "getPostById",
+            "url": "http://localhost:3001/posts/7863864b-08e6-41ac-ad7f-7806a2248213",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-01-25T20:08:49.749Z",
+            "modified": "2023-02-09T12:09:23.246Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c56af8f9-8c3e-4c52-bef8-ce9f0502e2b5",
+            "colId": "6083a6ad-eab1-456b-b39f-36c34f14be83",
+            "containerId": "",
+            "name": "postDelete",
+            "url": "http://localhost:3001/posts/7b710d97-7407-438e-b083-48d0026125ef",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-01-25T20:14:36.602Z",
+            "modified": "2023-01-30T13:07:05.414Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c0e01404-aafa-4966-a10b-588229a66963",
+            "colId": "6083a6ad-eab1-456b-b39f-36c34f14be83",
+            "containerId": "",
+            "name": "getPostsByName",
+            "url": "http://localhost:3001/posts/?title=laboriosam dolor voluptate",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-02-10T01:10:14.036Z",
+            "modified": "2023-02-10T01:10:18.217Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "title",
+                    "value": "laboriosam dolor voluptate",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}
