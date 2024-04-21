@@ -1,0 +1,140 @@
+<div className="container">
+
+
+
+
+<table className="table table-striped  table-hover">
+<thead>
+<tr>
+
+<th scope="col">id</th>
+<th scope="col">userId</th>
+<th scope="col">title</th>
+<th scope="col">body</th>
+
+<th scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+
+
+
+{
+    array?.map((a) => {
+        return (
+          <tr key={a.id}>
+          <td>{a.id}</td>
+          <td>{a.userId}</td>
+          <td>{a.title}</td>
+          <td>{a.body}</td>
+          
+          <td>
+
+    
+            
+        
+           <button  className="btn btn-success">Edit</button>
+
+  
+         
+
+           <button  className="btn btn-danger">Delete</button>
+ 
+           
+            
+          </td>
+        </tr>
+        )
+      })
+      
+      } 
+</tbody>
+</table>
+</div>
+
+
+
+
+//======================
+
+
+
+
+  return (
+      <> 
+     <Navbar/>
+  
+   <div className='container mt-5 '>
+    <h2 className='d-flex justify-content-center bg-dark text-white-50'>Listado de Posts</h2>
+   
+     
+   
+   <div className='container-sm'>
+   
+     <div className=' d-flex justify-content-end '>
+     <div className=''>
+     <button type="button" className="btn btn-secondary btn-lg" onClick={()=>handlerReset()} >Reset</button>
+     </div>
+     <Link className='btn-lg' to={`/PostCreateUpdate/`}>
+      <button type="button" className="btn btn-primary btn-lg">Crear Post</button>
+     </Link>
+   </div>
+   
+   
+   <table className="table table-hover table-striped  table-bordered table-dark">
+     <thead>
+       <tr>
+   
+         {/* <th scope="col">userId</th> */}
+         <th scope="col">Title</th>
+         <th scope="col">Body</th>
+          <th scope="col">Created In DB</th>
+         <th scope="col">Action</th>
+          <th scope="col">Detail</th> 
+       </tr>
+     </thead>
+     <tbody>
+       
+   
+       { allPosts?.map(e=>{
+         return(
+           <tr key={e.id}>
+          {/*  <th scope="row">{e.userId}</th> */}
+           <td>{e.title}</td>
+           <td>{e.body}</td>
+            <td >{e.createInDB === true?"true":"false"}</td> 
+            <td>
+            <Link to={`./PostCreateUpdate/${e.id}`}> 
+   
+                                                               {/* Si hace click aca le mando el titulo , body y el userId */}
+            <button className='btn btn-warning btn-md'   onClick={()=>handlerPropsUpdate(e.title,e.body,e.userId)}>Editar</button>
+            </Link>
+           
+           <Link to={`/PostList`}>  
+            <button className='btn btn-danger btn-md '  onClick={()=>handlerDelete(e.id)} >Delete</button>
+              </Link>  
+             </td> 
+             
+             <td>
+             <Link to={`/PostDetail/${e.id}`}>
+             <button type='button' className='btn btn-info btn-lg'>Ver Detail</button>
+             </Link>
+             </td>
+          
+            </tr>
+   
+         )
+       })
+     }
+     </tbody>
+   </table>
+   
+   </div>
+   
+   
+       </div>{/* Fin del div */}
+   
+   </>
+   
+     )
+ 
